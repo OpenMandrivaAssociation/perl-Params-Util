@@ -1,6 +1,6 @@
 %define module	Params-Util
 %define name	perl-%{module}
-%define version	0.23
+%define version	0.25
 %define	release	%mkrel 1
 
 Name:		    %{name}
@@ -10,7 +10,7 @@ Summary:	    Simple standalone param-checking functions
 License:	    GPL or Artistic
 Group:		    Development/Perl
 Url:		    http://search.cpan.org/dist/%{module}/
-Source:		    http://www.cpan.org/modules/by-module/Params/%{module}-%{version}.tar.bz2
+Source:		    http://www.cpan.org/modules/by-module/Params/%{module}-%{version}.tar.gz
 %if %{mdkversion} < 1010
 Buildrequires:	perl-devel
 %endif
