@@ -15,7 +15,6 @@ Source:		    http://www.cpan.org/modules/by-module/Params/%{module}-%{version}.t
 Buildrequires:	perl-devel
 %endif
 BuildArch:	    noarch
-BuildRoot:	    %{_tmppath}/%{name}-%{version}
 
 %description
 Params::Util provides a basic set of importable functions that makes checking
