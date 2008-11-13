@@ -1,7 +1,7 @@
 %define module	Params-Util
 %define name	perl-%{module}
-%define version	0.33
-%define	release	%mkrel 2
+%define version	0.35
+%define	release	%mkrel 1
 
 Name:		    %{name}
 Version:	    %{version}
@@ -11,10 +11,7 @@ License:	    GPL or Artistic
 Group:		    Development/Perl
 Url:		    http://search.cpan.org/dist/%{module}/
 Source:		    http://www.cpan.org/modules/by-module/Params/%{module}-%{version}.tar.gz
-%if %{mdkversion} < 1010
-Buildrequires:	perl-devel
-%endif
-BuildArch:	    noarch
+BuildRequires:  perl-devel
 BuildRoot:	    %{_tmppath}/%{name}-%{version}
 
 %description
@@ -42,7 +39,8 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root)
 %doc Changes README
-%{perl_vendorlib}/Params
+%{perl_vendorarch}/Params
+%{perl_vendorarch}/auto/Params
 %{_mandir}/*/*
 
 
