@@ -1,25 +1,25 @@
-%define module	Params-Util
-%define name	perl-%{module}
-%define version	1.00
-%define	release	%mkrel 1
+%define upstream_name	 Params-Util
+%define upstream_version 1.00
 
-Name:		    %{name}
-Version:	    %{version}
-Release:	    %{release}
+Name:		    perl-%{upstream_name}
+Version:	    %perl_convert_version %{upstream_version}
+Release:	    %mkrel 1
+
 Summary:	    Simple standalone param-checking functions
-License:	    GPL or Artistic
+License:	    GPL+ or Artistic
 Group:		    Development/Perl
-Url:		    http://search.cpan.org/dist/%{module}/
-Source:		    http://www.cpan.org/modules/by-module/Params/%{module}-%{version}.tar.gz
+Url:		    http://search.cpan.org/dist/%{upstream_name}/
+Source0:	    http://www.cpan.org/modules/by-module/Params/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires:  perl-devel
-BuildRoot:	    %{_tmppath}/%{name}-%{version}
+BuildRoot:	    %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Params::Util provides a basic set of importable functions that makes checking
 parameters a hell of a lot easier.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 chmod 644 Changes README lib/Params/Util.pm
 
 %build
@@ -42,5 +42,4 @@ rm -rf %{buildroot}
 %{perl_vendorarch}/Params
 %{perl_vendorarch}/auto/Params
 %{_mandir}/*/*
-
 
