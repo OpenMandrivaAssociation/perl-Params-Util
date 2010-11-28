@@ -1,9 +1,9 @@
 %define upstream_name	 Params-Util
-%define upstream_version 1.01
+%define upstream_version 1.03
 
 Name:		    perl-%{upstream_name}
 Version:	    %perl_convert_version %{upstream_version}
-Release:	    %mkrel 3
+Release:	    %mkrel 1
 
 Summary:	    Simple standalone param-checking functions
 License:	    GPL+ or Artistic
