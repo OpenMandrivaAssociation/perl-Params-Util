@@ -4,7 +4,7 @@
 Summary:	Simple standalone param-checking functions
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	19
+Release:	20
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://metacpan.org/pod/Params::Util
@@ -22,13 +22,13 @@ chmod 644 Changes README lib/Params/Util.pm
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
-%make
+%make_build
 
 %check
 %make test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc Changes README
