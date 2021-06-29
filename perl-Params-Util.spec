@@ -1,10 +1,10 @@
 %define modname	Params-Util
-%define modver	1.07
+%define modver	1.102
 
 Summary:	Simple standalone param-checking functions
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	21
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://metacpan.org/pod/Params::Util
@@ -18,7 +18,7 @@ parameters a hell of a lot easier.
 
 %prep
 %setup -qn %{modname}-%{modver}
-chmod 644 Changes README lib/Params/Util.pm
+chmod 644 Changes lib/Params/Util.pm
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
@@ -31,7 +31,7 @@ chmod 644 Changes README lib/Params/Util.pm
 %make_install
 
 %files
-%doc Changes README
+%doc Changes
 %{perl_vendorarch}/Params
 %{perl_vendorarch}/auto/Params
 %{_mandir}/man3/*
