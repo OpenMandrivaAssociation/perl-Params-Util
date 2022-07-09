@@ -1,5 +1,7 @@
 %define modname	Params-Util
 %define modver	1.102
+# broken build system?
+%global _debugsource_template %{nil}
 
 Summary:	Simple standalone param-checking functions
 Name:		perl-%{modname}
@@ -17,7 +19,7 @@ Params::Util provides a basic set of importable functions that makes checking
 parameters a hell of a lot easier.
 
 %prep
-%setup -qn %{modname}-%{modver}
+%autosetup -p1 -n %{modname}-%{modver}
 chmod 644 Changes lib/Params/Util.pm
 
 %build
@@ -35,4 +37,3 @@ chmod 644 Changes lib/Params/Util.pm
 %{perl_vendorarch}/Params
 %{perl_vendorarch}/auto/Params
 %{_mandir}/man3/*
-
