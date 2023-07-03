@@ -37,3 +37,5 @@ chmod 644 Changes lib/Params/Util.pm
 %{perl_vendorarch}/Params
 %{perl_vendorarch}/auto/Params
 %{_mandir}/man3/*
+%exclude %{_prefix}/src/debug/perl-Params-Util-1.102.0-4.aarch64/Util.c
+%exclude %{_prefix}/src/debug/perl-Params-Util-1.102.0-4.aarch64/Util.xs
