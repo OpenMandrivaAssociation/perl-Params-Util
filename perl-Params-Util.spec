@@ -9,7 +9,7 @@ Version:	%perl_convert_version %{modver}
 Release:	4
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		http://metacpan.org/pod/Params::Util
+Url:		https://metacpan.org/pod/Params::Util
 Source0:	http://www.cpan.org/modules/by-module/Params/%{modname}-%{modver}.tar.gz
 BuildRequires:	perl-devel
 BuildRequires:	perl(Test::More)
