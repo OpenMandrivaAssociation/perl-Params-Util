@@ -1,16 +1,13 @@
 %define modname	Params-Util
-%define modver	1.102
-# broken build system?
-%global _debugsource_template %{nil}
 
 Summary:	Simple standalone param-checking functions
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
+Version:	1.102
 Release:	5
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/pod/Params::Util
-Source0:	http://www.cpan.org/modules/by-module/Params/%{modname}-%{modver}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Params/%{modname}-%{version}.tar.gz
 BuildRequires:	perl-devel
 BuildRequires:	perl(Test::More)
 
@@ -19,7 +16,7 @@ Params::Util provides a basic set of importable functions that makes checking
 parameters a hell of a lot easier.
 
 %prep
-%autosetup -p1 -n %{modname}-%{modver}
+%autosetup -p1 -n %{modname}-%{version}
 chmod 644 Changes lib/Params/Util.pm
 
 %build
@@ -37,5 +34,3 @@ chmod 644 Changes lib/Params/Util.pm
 %{perl_vendorarch}/Params
 %{perl_vendorarch}/auto/Params
 %{_mandir}/man3/*
-%exclude %{_prefix}/src/debug/perl-Params-Util-1.102.0-4.aarch64/Util.c
-%exclude %{_prefix}/src/debug/perl-Params-Util-1.102.0-4.aarch64/Util.xs
